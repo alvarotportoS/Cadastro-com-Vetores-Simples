@@ -6,11 +6,10 @@ public class Main {
 
         System.out.print("Quantos produtos deseja cadastrar? ");
         int quantidade = sc.nextInt();
-        sc.nextLine(); // limpar buffer
+        sc.nextLine();
 
         Produto[] produtos = new Produto[quantidade];
 
-        // Cadastro dos produtos
         for (int i = 0; i < quantidade; i++) {
             produtos[i] = new Produto();
             System.out.println("\nProduto " + (i + 1) + ":");
@@ -26,7 +25,6 @@ public class Main {
             p.imprimirInformacoes();
         }
 
-        // Encontrar o produto mais caro
         Produto maisCaro = produtos[0];
         for (int i = 1; i < produtos.length; i++) {
             if (produtos[i].preco > maisCaro.preco) {
